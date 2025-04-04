@@ -9,6 +9,7 @@ public class Main {
         int quantity = sc.nextInt();
         ItemPedido itempedido = new ItemPedido(product, quantity);
         lista.addPedido(itempedido);
+        print(quantity + " " + product.getName() + " no capricho, vai ser " + product.price * quantity + " meu patrao\n");
 
     }
     public static void main(String[] args) {
@@ -16,9 +17,9 @@ public class Main {
 
         Produto pipoca = new Produto(1,"Pipoca",50,500.00f);
         Produto cigarro = new Produto(2, "Cigarro", 1000, 1.00f);
-        print("Loja do Fabiano");
-        print("1 - Pipoca 500R$");
-        print("2 - Cigarro 1R$");
+        print("Loja do Fabiano\n");
+        print("1 - Pipoca 500R$\n");
+        print("2 - Cigarro 1R$\n");
         int answer = sc.nextInt();
         Pedido lista = new Pedido(1);
         switch(answer){
@@ -32,9 +33,6 @@ public class Main {
                 print("?\n");
                 break;
 
-        }
-        
-        Pedido listaPedidos = new Pedido(1);
-        listaPedidos.addPedido(null);        
+        }   
     }
 }
