@@ -33,6 +33,9 @@ public class Produto {
     public void setStock(int stock) {
         this.stock = stock;
     }
+    public float getPrice(){
+        return price;
+    }
 
 
 }

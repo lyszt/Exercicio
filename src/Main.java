@@ -9,7 +9,7 @@ public class Main {
         int quantity = sc.nextInt();
         ItemPedido itempedido = new ItemPedido(product, quantity);
         lista.addPedido(itempedido);
-        print(quantity + " " + product.getName() + " no capricho, vai ser " + product.price * quantity + " meu patrao\n");
+        print(quantity + " " + product.getName() + " no capricho, vai ser " + product.getPrice() * quantity + " meu patrao\n");
 
     }
     public static void main(String[] args) {
