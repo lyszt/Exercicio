@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Pedido {
     int id;
-    float valorTotal;
+    float valorTotal = 0;
     ArrayList<ItemPedido> itens = new ArrayList<ItemPedido>();
 
     public Pedido(int id){
@@ -21,7 +21,7 @@ public class Pedido {
         return valorTotal;
     }
     public void setValorTotal(float valorTotal) {
-        this.valorTotal = valorTotal;
+        this.valorTotal += valorTotal;
     }
     public ArrayList<ItemPedido> getItemPedido() {
         return itens;
