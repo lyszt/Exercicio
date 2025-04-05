@@ -29,9 +29,11 @@ public class Main {
             switch(answer){
                 case 1:
                     buildRequest(sc, pipoca, lista);
+                    print("volte sempre amigo");
                     break;
                 case 2:
                     buildRequest(sc, cigarro, lista);
+                    print("da proxima vez seja mais irresponsavel\n");
                     break;
                 default:
                     print("?\n");
