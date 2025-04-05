@@ -18,13 +18,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Produto pipoca = new Produto(1,"Pipoca",50,500.00f);
-        Produto cigarro = new Produto(2, "Cigarro", 1000, 1.00f);
+        Produto cigarro = new Produto(2, "Cigarro", 1000, .5f);
         print("Loja do Fabiano\n");
         
         Pedido lista = new Pedido(1);
         while(true){
-            print("1 - Pipoca 500R$\n");
-            print("2 - Cigarro 1R$\n");
+            print("1 - Pipoca 500R$");
+            print("2 - Cigarro 50 centavo");
+            print("3 so seu chefe agora quero cadastra um prduto novo");
             int answer = sc.nextInt();
             switch(answer){
                 case 1:
@@ -34,6 +35,9 @@ public class Main {
                 case 2:
                     buildRequest(sc, cigarro, lista);
                     print("da proxima vez seja mais irresponsavel\n");
+                    break;
+                case 3:
+                    print("nao");
                     break;
                 default:
                     print("?\n");
