@@ -1,49 +1,19 @@
-import java.util.Scanner;
-
 public class Main {
-    public static void print(String content){
-        System.out.println(content);
+
+    public static void testaPortas(){
+        Porta johnson = new Porta(25,25,25,true,"rosa");
+        johnson.abre();
+        System.out.println(johnson.toString());
+        System.out.println(johnson.estaAberta());
+        johnson.fecha();
+        System.out.println(johnson.estaAberta());
+        johnson.pinta("miau");
+        System.out.println(johnson.toString());
     }
-    private static void buildRequest(Scanner sc, Produto product, Pedido lista){
-        print("Quanta voce quer ?\n");
-        int quantity = sc.nextInt();
-        ItemPedido itempedido = new ItemPedido(product, quantity);
-        lista.addPedido(itempedido);
-        lista.setValorTotal(quantity*product.getPrice());
-        print(quantity + " " + product.getName() + " no capricho, vai ser " + product.getPrice() * quantity + " meu patrao\n");
-        print("por enquanto esta " + lista.getValorTotal() + "\n");
+    public static void testaCasas(){
 
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception{
 
-        Produto pipoca = new Produto(1,"Pipoca",50,500.00f);
-        Produto cigarro = new Produto(2, "Cigarro", 1000, .5f);
-        print("Loja do Fabiano\n");
-        
-        Pedido lista = new Pedido(1);
-        while(true){
-            print("1 - Pipoca 500R$");
-            print("2 - Cigarro 50 centavo");
-            print("3 so seu chefe agora quero cadastra um prduto novo");
-            int answer = sc.nextInt();
-            switch(answer){
-                case 1:
-                    buildRequest(sc, pipoca, lista);
-                    print("volte sempre amigo");
-                    break;
-                case 2:
-                    buildRequest(sc, cigarro, lista);
-                    print("da proxima vez seja mais irresponsavel\n");
-                    break;
-                case 3:
-                    print("nao");
-                    break;
-                default:
-                    print("?\n");
-                    break;
-
-        }   
-    }
     }
 }
